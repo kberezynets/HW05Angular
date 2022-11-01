@@ -1,0 +1,86 @@
+@import '../../../shared/styles/variables';
+@import '../../../shared/styles/mixins';
+
+.my-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 90%;
+    margin: 50px auto;
+}
+
+section {
+    width: 45%;
+}
+
+/* Form style */
+.field {
+    display: flex;
+    flex-flow: column;
+    margin-bottom: 20px;
+}
+
+label {
+    margin-bottom: 10px;
+}
+
+input,
+.btn {
+    @include input-style;
+    padding: 10px;
+}
+
+.button {
+    width: 100%;
+    display: block;
+    border: 1px solid $base-green;
+    @include btn-color ($base-green, $dark-green, $transp-green, $base-white);
+}
+
+.blue {
+    border-color: $base-blue;
+    @include btn-color ($base-blue, $dark-blue, $transp-blue, $base-white);
+}
+
+/* Table style */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th,
+td {
+    border-top: 1px solid $dark-grey;
+    text-align: left;
+    width: 120px;
+}
+
+th {
+    border-bottom: 2px solid $dark-grey;
+    line-height: 40px;
+}
+
+td {
+    line-height: 60px;
+}
+
+td:nth-child(1),
+th:nth-child(1) {
+    width: 30px;
+}
+
+td:nth-child(5),
+td:nth-child(6),
+th:nth-child(5),
+th:nth-child(6) {
+    width: 80px;
+}
+
+.edit {
+    @include btn-color ($base-gold, $dark-gold, $transp-yellow, $black-grey);
+}
+
+.delete {
+    @include btn-color ($base-red, $dark-red, $transp-red, $base-white);
+}

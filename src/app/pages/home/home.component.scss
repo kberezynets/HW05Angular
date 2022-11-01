@@ -1,0 +1,40 @@
+@import '../../shared/styles/variables';
+@import '../../shared/styles/mixins';
+
+.my-container{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-top: 100px;
+}
+
+.my-box{
+    width: 25%;
+    border: 1px solid $base-grey;
+}
+
+.task-pic{
+    width: 100%;
+    height: 200px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+h6{
+    @include centered-header(none, 24px);
+    color: $base-red;
+}
+
+.btn-box{
+    background-color: $light-grey;
+    border-top: 1px solid $base-grey;
+    padding: 10px 20px;
+}
+
+.btn-details{
+    @include input-style;
+    @include btn-color ($base-green, $dark-green, none, $base-white);
+    width: 100%;
+    line-height: 24px;
+}

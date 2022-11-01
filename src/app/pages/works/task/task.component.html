@@ -1,0 +1,46 @@
+<h2>Count of task {{ count }}</h2>
+<div class="my-form">
+    <input type="text" [(ngModel)]="inputTask" class="my-input">
+    <input type="button" class="btn add-btn" value="Add" (click)="addTask()">
+</div>
+<div class="my-container">
+    <table>
+        <tr>
+            <th>#</th>
+            <th>Task</th>
+            <th>Check</th>
+            <th>DONE/IN PROGRESS</th>
+            <th>Edit</th>
+            <th>DELETE</th>
+        </tr>
+        <tbody>
+            <tr *ngFor="let task of taskData; index as i">
+                <td> 
+                    <b>{{ i+1 }} </b> 
+                </td>
+                <td> {{ task.name }} </td>
+                <td>
+                    <input type="checkbox" [checked]="task.check==true" [(ngModel)]="task.check"> 
+                </td>
+                <td [style.color]="task.check ? 'green' : 'red'"> {{ task.check? 'Done' : 'In PROGRESS' }}</td>
+                <td>
+                    <input type="button" class="btn edit" value="edit" (click)="editTask(i)">
+                </td>
+                <td>
+                    <input type="button" class="btn delete" value="delete" (click)="deleteTask(i)" [disabled]="task.check==false">
+                </td>
+            </tr>
+            <tr *ngIf="editStatus" class="edit-row">
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>
+                    <input type="text" [(ngModel)]="editValue" class="my-input">
+                </td>
+                <td class="my-last-cell">
+                    <input type="button" class="btn save" value="save" (click)="saveEdit()" >
+                </td>
+            </tr>
+        </tbody>
+    </table>    
+</div>

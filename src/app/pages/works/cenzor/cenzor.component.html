@@ -1,0 +1,11 @@
+<div class="box">
+    <span>Bad words:</span>
+    <span class="my-words">{{ ' ' + allWords }}</span>
+    <div class="input-block">
+        <input type="text" class="words-here" [style.borderColor] = "isWords ? 'rgb(200, 200, 200)' : 'red' " placeholder="{{ wordPlaceholder }}" [(ngModel)]="newWords">
+        <input type="button" class="btn add-btn" value="Add" (click)="addWords()" >
+        <input type="button" class="btn" value="Resert" (click)="resertWords()"> 
+    </div>
+    <textarea cols="40" rows="5" class="text-here" [style.borderColor] = "isText ? 'rgb(200, 200, 200)' : 'red' " placeholder="{{ textPlaceholder }}" [(ngModel)]="myText"></textarea>
+    <input type="button" class="btn cenzor-btn" value="Cenzor" (click)="cenzorText()">
+</div>

@@ -1,0 +1,7 @@
+@import '../../app/shared/styles/variables';
+@import '../../app/shared/styles/mixins';
+
+h2{
+    @include centered-header($light-grey, 80px);
+    border-bottom: 3px solid $base-grey;
+}

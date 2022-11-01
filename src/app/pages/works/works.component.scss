@@ -1,0 +1,13 @@
+@import '../../shared/styles/variables';
+
+.nav-tabs .nav-item .active-green{
+    color: $base-green;
+}
+
+.nav-tabs .nav-item .back-home{
+    color: $dark-red;
+}
+
+li:nth-last-child(2){
+    width:55%;
+}

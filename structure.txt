@@ -1,0 +1,14 @@
+app/
+    components/
+        header.component
+    pages/
+        home.component
+        works.compomponent
+            cenzor.component
+            users.component
+            task.component
+    shared/
+        styles/
+            _variables.scss
+            _mixins.scss
+            _base.scss

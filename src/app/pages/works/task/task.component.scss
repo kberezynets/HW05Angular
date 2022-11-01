@@ -1,0 +1,90 @@
+@import '../../../shared/styles/variables';
+@import '../../../shared/styles/mixins';
+
+h2{
+    line-height: 80px;
+    margin: 0px 50px;
+}
+
+.my-form{
+    border-top: 1px solid $light-grey;
+    display: flex;
+    justify-content: space-between;
+    margin: 0px 50px;
+    padding: 20px 0px;
+}
+
+.my-input {
+    width: 75%;
+    line-height: 24px;
+    @include input-style;
+}
+
+.btn {
+    width: 22%;
+    border: 1px solid $base-green;
+    @include btn-color ($base-green, $dark-green, $transp-green, $base-white);
+}
+
+.my-container{
+    padding: 0px 50px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th,
+td {
+    border-top: 1px solid $light-grey;
+    text-align: left;
+}
+
+th {
+    border-bottom: 2px solid $light-grey;
+    line-height: 40px;
+}
+
+td {
+    line-height: 60px;
+}
+
+td:nth-child(1),
+th:nth-child(1) {
+    width: 40px;
+    padding-left: 10px;
+}
+
+tbody tr:hover{
+    background-color: $light-grey;
+
+    td{
+        background-color: transparent;
+    }
+}
+
+.edit {
+    border: none;
+    width: 60px;
+    @include btn-color ($base-gold, $dark-gold, $transp-yellow, $black-grey);
+}
+
+.delete {
+    border: none;
+    width: 100px;
+    @include btn-color ($base-red, $dark-red, $transp-red, $base-white);
+
+    &[disabled]{
+        background-color: $light-red;
+        cursor: auto;
+    }
+}
+
+.edit-row{
+    background-color: $light-grey;
+}
+
+.save{
+    width: 60px;
+}
